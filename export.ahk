@@ -1,3 +1,7 @@
+;/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\
+; Wrappers
+;\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/--\--/
+
 IfBetween(ByRef var, LowerBound, UpperBound) {
 	If var between %LowerBound% and %UpperBound%
 		Return, true
@@ -30,7 +34,6 @@ IfIsNot(ByRef var, type) {
 	If var is not %type%
 		Return, true
 }
-
 ControlGet(Cmd, Value = "", Control = "", WinTitle = "", WinText = "", ExcludeTitle = "", ExcludeText = "") {
 	ControlGet, v, %Cmd%, %Value%, %Control%, %WinTitle%, %WinText%, %ExcludeTitle%, %ExcludeText%
 	Return, v
@@ -54,6 +57,9 @@ DriveSpaceFree(Path) {
 EnvGet(EnvVarName) {
 	EnvGet, v, %EnvVarName%
 	Return, v
+}
+FileCopy(SourcePattern, DestPattern, Overwrite = 1) {
+	FileCopy, %SourcePattern%, %DestPattern%, %Overwrite%
 }
 FileGetAttrib(Filename = "") {
 	FileGetAttrib, v, %Filename%
