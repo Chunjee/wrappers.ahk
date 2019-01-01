@@ -61,6 +61,14 @@ EnvGet(EnvVarName) {
 FileCopy(SourcePattern, DestPattern, Overwrite = 1) {
 	FileCopy, %SourcePattern%, %DestPattern%, %Overwrite%
 }
+FileCreateDir(DirName) {
+	FileCreateDir, % DirName
+	if (ErrorLevel) {
+		return false
+	} else {
+		return true
+	}
+}
 FileGetAttrib(Filename = "") {
 	FileGetAttrib, v, %Filename%
 	Return, v
