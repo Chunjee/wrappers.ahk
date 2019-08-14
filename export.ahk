@@ -61,9 +61,17 @@ EnvGet(EnvVarName) {
 FileCopy(SourcePattern, DestPattern, Overwrite = 1) {
 	FileCopy, %SourcePattern%, %DestPattern%, %Overwrite%
 }
+FileDelete(SourcePattern) {
+	FileDelete, %FilePattern%
+	if (ErrorLevel) { ;0 on success = return true
+		return false
+	} else {
+		return true
+	}
+}
 FileCreateDir(DirName) {
 	FileCreateDir, % DirName
-	if (ErrorLevel) {
+	if (ErrorLevel) { ;0 on success = return true
 		return false
 	} else {
 		return true
