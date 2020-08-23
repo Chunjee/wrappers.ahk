@@ -3,9 +3,6 @@
     "version": "1.1.0",
     "description": "ahk function wrappers",
     "main": "export.ahk",
-    "scripts": {
-        "newinstall": "yarn install --modules-folder ./lib"
-    },
     "dependencies": { },
     "author": "",
     "license": "unselected"
