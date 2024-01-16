@@ -1,6 +1,6 @@
 {
     "name": "wrappers.ahk",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "description": "ahk function wrappers",
     "main": "export.ahk",
     "dependencies": { },
